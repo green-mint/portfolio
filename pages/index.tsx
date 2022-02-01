@@ -11,7 +11,7 @@ export default function Home() {
     <>
       <Root>
         <Head>
-          <title>Saad's Portfolio</title>
+          <title>Saad&lsquo;s Portfolio</title>
           <meta
             name="description"
             content="portfolio of Muhammad Saad ur Rehman aka green-mint / green-mint"
