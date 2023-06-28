@@ -1,6 +1,10 @@
 import { Inter } from "next/font/google";
 import GradCircle from "@/components/GradCircle";
-import Moon from "@/components/Moon";
+import dynamic from "next/dynamic";
+// import Moon from "@/components/Moon";
+const Moon = dynamic(() => import("@/components/Moon"), {
+  ssr: false,
+});
 
 const inter = Inter({ subsets: ["latin"] });
 
