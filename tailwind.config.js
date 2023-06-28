@@ -1,24 +1,17 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
+    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
-      colors: {
-        "ta-green": "#84fab0", // tempting azure
-        "ta-blue": "#8fd3f4",
-        "er-green": "#43cea2", // eternal river
-        "er-blue": "#185a9d",
-        "c-red": "#c33764", // celestial
-        "c-blue": "#1d2671",
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-conic':
+          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
-      fontFamily: {
-        lisa: ["Mono Lisa", "sans-serif"],
-        pop: ["Poppins", "sans-serif"],
-        fira: ["Fira Code"],
-        shadow: ["'Shadows Into Light'", "cursive"],
-      }
     },
   },
   plugins: [],
