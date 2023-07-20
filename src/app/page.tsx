@@ -12,16 +12,17 @@ import {
 } from "./data";
 import { Github, Linkedin, MoveRight, Twitter } from "lucide-react";
 import Projects from "@/components/Projects";
+import { cn } from "@/lib/utils";
 
 export default function Home() {
   return (
-    <main className="px-4">
+    <main className="px-4 sm:px-6">
       {/* section hero */}
       <section>
-        <h1 className="text-center text-4xl mt-24 text-white">
+        <h1 className="text-center text-4xl sm:text-5xl mt-24 text-white">
           Saad, a software engineer based in Islamabad
         </h1>
-        <p className="mt-5 text-center leading-relaxed">
+        <p className="mt-5 text-center leading-relaxed sm:px-10">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
           nulla harum aliquam commodi et magnam doloribus possimus porro omnis
           sit! Quas!
@@ -48,8 +49,8 @@ export default function Home() {
         <Image
           src="/me.jpeg"
           alt="Picture of the author"
-          width={500}
-          height={500}
+          width={2000}
+          height={1025}
           className="mt-12"
         />
       </section>
@@ -64,11 +65,15 @@ export default function Home() {
           lorem morbi hendrerit. Maecenas et, at quis purus.
         </p>
 
-        <div className="mt-10 border-t-[0.08rem] border-t-[#4a4a4a] flex flex-col">
+        <div
+          className={cn(
+            "grid sm:grid-cols-2 sm:gap-x-4 mt-10",
+            "[&>*:nth-child(1)]:border-t-[0.08rem]  sm:[&>*:nth-child(2)]:border-t-[0.08rem]"
+          )}>
           {skills.map((skill, index) => (
             <div
               key={index}
-              className="py-6 border-b-[0.08rem] border-b-[#4a4a4a]">
+              className="py-6 border-b-[0.08rem] border-b-[#4a4a4a] border-t-[#4a4a4a]">
               <span>{skill}</span>
             </div>
           ))}
