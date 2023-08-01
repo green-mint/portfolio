@@ -13,6 +13,7 @@ import {
 import { Github, Linkedin, MoveRight, Twitter } from "lucide-react";
 import Projects from "@/components/Projects";
 import { cn } from "@/lib/utils";
+import SocialIcons from "@/components/SocialIcons";
 
 export default function Home() {
   return (
@@ -29,23 +30,7 @@ export default function Home() {
             sit! Quas!
           </p>
 
-          <ul className="flex mt-6 lg:mt-10 justify-center text-white space-x-5">
-            <li>
-              <Link href={githubUrl}>
-                <Github color="#fffbfe" />
-              </Link>
-            </li>
-            <li>
-              <Link href={twitterUrl}>
-                <Twitter color="#fffbfe" />
-              </Link>
-            </li>
-            <li>
-              <Link href={linkedinUrl}>
-                <Linkedin color="#fffbfe" />
-              </Link>
-            </li>
-          </ul>
+          <SocialIcons className="mt-6 lg:mt-10" />
         </div>
 
         <Image
@@ -87,7 +72,9 @@ export default function Home() {
       {/* section projects */}
       <section className="mt-28 lg:mt-36">
         <div className="md:text-center md:max-w-xl mx-auto lg:mb-20">
-          <h2 className="text-3xl md:text-5xl xl:text-6xl text-white">Saad&apos;s Work</h2>
+          <h2 className="text-3xl md:text-5xl xl:text-6xl text-white">
+            Saad&apos;s Work
+          </h2>
           <p className="leading-relaxed mt-5">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit dapibus
             porta lorem morbi hendrerit. Maecenas et, at quis purus.

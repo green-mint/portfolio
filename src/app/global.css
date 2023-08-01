@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes line1 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(10px);
+  }
+}
+
+.line1-animate {
+  animation: line1 1s infinite alternate;
+}

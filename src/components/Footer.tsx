@@ -2,6 +2,7 @@ import { githubUrl, linkedinUrl, twitterUrl } from "@/app/data";
 import { Github, Linkedin, Twitter } from "lucide-react";
 import Link from "next/link";
 import React from "react";
+import SocialIcons from "./SocialIcons";
 
 type Props = {};
 
@@ -13,23 +14,8 @@ const Footer = (props: Props) => {
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae ad
         odio quia facere consequatur hic atque.
       </p>
-      <ul className="flex mt-4 justify-center text-white space-x-5">
-        <li>
-          <Link href={githubUrl}>
-            <Github color="#fffbfe" />
-          </Link>
-        </li>
-        <li>
-          <Link href={twitterUrl}>
-            <Twitter color="#fffbfe" />
-          </Link>
-        </li>
-        <li>
-          <Link href={linkedinUrl}>
-            <Linkedin color="#fffbfe" />
-          </Link>
-        </li>
-      </ul>
+
+      <SocialIcons className="mt-4" />
 
       <p className="mt-14 mb-2 text-center">
         Made with 🤍 by{" "}
