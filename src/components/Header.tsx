@@ -13,7 +13,7 @@ const Hamburger = () => {
 
 const Header = (props: Props) => {
   return (
-    <header className="flex z-50 bg-[#1d1d1d]/60 backdrop-blur-md fixed top-0 w-screen px-4 text-white justify-between text-xl py-4">
+    <header className="flex z-50 bg-[#1d1d1d]/60 backdrop-blur-md fixed top-0 w-full max-w-7xl px-4 text-white justify-between text-xl py-4">
       <span>
         {"<"}green-mint{" />"}
       </span>

@@ -21,7 +21,7 @@ const Projects = ({ projects }: Props) => {
       {projects.map((project, index) => (
         <div
           className={cn(
-            "flex flex-col sm:flex-row sm:space-x-10 py-10 border-b-[0.08rem] group cursor-pointer transition-colors duration-700",
+            "flex flex-col sm:flex-row sm:space-x-10 py-10 lg:py-16 border-b-[0.08rem] group cursor-pointer transition-colors duration-700",
             hoveredProject === index || hoveredProject === index + 1
               ? "border-b-white"
               : "border-b-[#4a4a4a]"
@@ -32,17 +32,19 @@ const Projects = ({ projects }: Props) => {
           <div>
             <h3 className="text-2xl sm:mt-0.5">0{index + 1}</h3>
           </div>
-          <div>
-            <h2 className="text-3xl sm:text-4xl mt-3 sm:mt-0 text-white">
-              {project.name}
-            </h2>
-            <p className="mt-3 leading-relaxed">{project.description}</p>
-            <Link className="text-white block mt-3" href="/">
-              Read More
-            </Link>
-            <div className="mt-8">
+          <div className="md:flex md:space-x-3.5">
+            <div className="md:w-3/4">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl mt-3 sm:mt-0 text-white">
+                {project.name}
+              </h2>
+              <p className="mt-3 md:mt-8 leading-relaxed">{project.description}</p>
+              <Link className="text-white block mt-3 md:mt-8" href="/">
+                Read More
+              </Link>
+            </div>
+            <div className="mt-8 md:mt-0 md:w-1/4 flex flex-col md:items-center md:justify-center">
               {project.skills.map((skill, index) => (
-                <span key={index} className="block mt-3">
+                <span key={index} className="block mt-3 md:mt-5">
                   {skill}
                 </span>
               ))}

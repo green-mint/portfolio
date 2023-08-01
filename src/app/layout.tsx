@@ -19,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={cn(mono.className, "bg-[#1d1d1d] text-[#c9c9c9]")}>
+      <body className={cn(mono.className, "bg-[#1d1d1d] text-[#c9c9c9] max-w-7xl mx-auto")}>
         <Header />
         {children}
         <Footer />
