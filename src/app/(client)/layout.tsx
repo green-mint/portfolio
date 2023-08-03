@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import "./globals.css";
+import "../globals.css";
 import type { Metadata } from "next";
 import { Source_Code_Pro } from "next/font/google";
 import Header from "@/components/Header";

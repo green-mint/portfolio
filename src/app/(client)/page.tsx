@@ -9,7 +9,7 @@ import {
   skills,
   testimonials,
   twitterUrl,
-} from "./data";
+} from "../data";
 import { Github, Linkedin, MoveRight, Twitter } from "lucide-react";
 import Projects from "@/components/Projects";
 import { cn } from "@/lib/utils";
