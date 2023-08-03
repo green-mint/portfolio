@@ -4,9 +4,10 @@ import { selectedProjects } from "@/app/data";
 import React, { useState } from "react";
 import Link from "./ui/link";
 import { cn } from "@/lib/utils";
+import { Project } from "@/payload/payload-types";
 
 type Props = {
-  projects: typeof selectedProjects;
+  projects: Project[];
 };
 
 const Projects = ({ projects }: Props) => {
@@ -35,17 +36,17 @@ const Projects = ({ projects }: Props) => {
           <div className="md:flex md:space-x-3.5">
             <div className="md:w-3/4">
               <h2 className="text-3xl sm:text-4xl md:text-5xl mt-3 sm:mt-0 text-white">
-                {project.name}
+                {project.title}
               </h2>
-              <p className="mt-3 md:mt-8 leading-relaxed">{project.description}</p>
+              <p className="mt-3 md:mt-8 leading-relaxed">{project.oneLiner}</p>
               <Link className="text-white block mt-3 md:mt-8" href="/">
                 Read More
               </Link>
             </div>
             <div className="mt-8 md:mt-0 md:w-1/4 flex flex-col md:items-center md:justify-center">
-              {project.skills.map((skill, index) => (
+              {project.techStack.map((tech, index) => (
                 <span key={index} className="block mt-3 md:mt-5">
-                  {skill}
+                  {tech.name}
                 </span>
               ))}
             </div>

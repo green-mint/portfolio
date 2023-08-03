@@ -1,21 +1,32 @@
 import Image from "next/image";
 import Link from "@/components/ui/link";
 
-import {
-  githubUrl,
-  linkedinUrl,
-  selectedBlogs,
-  selectedProjects,
-  skills,
-  testimonials,
-  twitterUrl,
-} from "../data";
-import { Github, Linkedin, MoveRight, Twitter } from "lucide-react";
+import { selectedBlogs, skills, testimonials } from "../data";
+import { MoveRight } from "lucide-react";
 import Projects from "@/components/Projects";
 import { cn } from "@/lib/utils";
 import SocialIcons from "@/components/SocialIcons";
+import getPayloadClient from "@/payload/payloadClient";
 
-export default function Home() {
+const getSelectedProjects = async () => {
+  const payload = await getPayloadClient();
+
+  return (
+    await payload.find({
+      collection: "projects",
+      where: {
+        isSelected: {
+          equals: true,
+        },
+      },
+      sort: "position"
+    })
+  ).docs;
+};
+
+export default async function Home() {
+  const selectedProjects = await getSelectedProjects();
+
   return (
     <main className="px-4 sm:px-6 lg:">
       {/* section hero */}
