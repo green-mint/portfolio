@@ -1,14 +1,13 @@
-import path from 'path';
-import { buildConfig } from 'payload/config';
+import path from "path";
+import { buildConfig } from "payload/config";
+import Projects from "./collections/Projects";
 
 export default buildConfig({
-  collections: [
-    // Your collections here
-  ],
+  collections: [Projects],
   globals: [
     // Your globals here
   ],
   typescript: {
-    outputFile: path.resolve(__dirname, '../payload-types.ts'),
+    outputFile: path.resolve(__dirname, "./payload-types.ts"),
   },
 });
