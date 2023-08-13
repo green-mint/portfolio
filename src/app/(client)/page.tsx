@@ -19,7 +19,7 @@ const getSelectedProjects = async () => {
           equals: true,
         },
       },
-      sort: "position"
+      sort: "position",
     })
   ).docs;
 };
