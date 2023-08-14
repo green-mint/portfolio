@@ -5,12 +5,14 @@ const { withPayload } = require("@payloadcms/next-payload");
 
 module.exports = withPayload(
   {
-    outputFileTracingExcludes: {
-      "*": [
-        "node_modules/@swc/core-linux-x64-gnu",
-        "node_modules/@swc/core-linux-x64-musl",
-        "node_modules/@esbuild/linux-x64",
-      ],
+    experimental: {
+      outputFileTracingExcludes: {
+        "*": [
+          "node_modules/@swc/core-linux-x64-gnu",
+          "node_modules/@swc/core-linux-x64-musl",
+          "node_modules/@esbuild/linux-x64",
+        ],
+      },
     },
   },
   {
