@@ -5,7 +5,13 @@ const { withPayload } = require("@payloadcms/next-payload");
 
 module.exports = withPayload(
   {
-    // your Next config here
+    outputFileTracingExcludes: {
+      "*": [
+        "node_modules/@swc/core-linux-x64-gnu",
+        "node_modules/@swc/core-linux-x64-musl",
+        "node_modules/@esbuild/linux-x64",
+      ],
+    },
   },
   {
     // The second argument to `withPayload`
