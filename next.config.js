@@ -6,7 +6,13 @@ const { withPayload } = require("@payloadcms/next-payload");
 module.exports = withPayload(
   {
     experimental: {
-      outputFileTracingIgnores: ['**swc/core**'],
+      outputFileTracingExcludes: {
+        "*": [
+          "node_modules/.pnpm/@swc/core-linux-x64-gnu",
+          "node_modules/.pnpm/@swc/core-linux-x64-musl",
+          "node_modules/.pnpm/@esbuild/linux-x64",
+        ],
+      },
     },
   },
   {
